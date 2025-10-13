@@ -16,14 +16,17 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit"
   },
   "main": "./dist/hook-lib.umd.js",
-  "module": "./dist/hook-lib.js",
+  "module": "./dist/hook-lib.es.js",
   "exports": {
     ".": {
-      "import": "./dist/hook-lib.js",
-      "require": "./dist/hook-lib.umd.csj",
+      "import": "./dist/hook-lib.es.js",
+      "require": "./dist/hook-lib.umd.js",
       "types": "./dist/index.d.ts"
     }
   },
