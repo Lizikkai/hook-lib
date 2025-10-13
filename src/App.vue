@@ -1,16 +1,3 @@
-# Vue 项目自用hooks库
-
-## 安装
-```bash
-npm install hook-lib
-```
-## 引入
-```ts
-import { useDevice, useEnv } from 'hook-lib'
-```
-
-## 示例
-```vue
 <template>
   <div>
     <div>是PC端吗？{{ isPC ? '是' : '不是' }}</div>
@@ -28,4 +15,3 @@ import { useDevice, useEnv } from 'hook-lib'
     const { isPC, isMobile } = useDevice()
     const { isWxWork, isWeChat, isBroswer, userAgent, envType } = usePlatformEnv()
 </script>
-```
