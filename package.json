@@ -1,21 +1,51 @@
 {
   "name": "@lizikkai/hooks-lib",
+  "description": "A vue3 hooks library",
   "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Lizikkai/hook-lib.git"
+  },
+  "keywords": [
+    "vue3",
+    "hooks",
+    "vue"
+  ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vite build"
   },
-  "author": {
-    "name": "Lizikkai"
+  "main": "./dist/hook-lib.umd.js",
+  "module": "./dist/hook-lib.js",
+  "exports": {
+    ".": {
+      "import": "./dist/hook-lib.js",
+      "require": "./dist/hook-lib.umd.csj",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "dependencies": {
-    "vue": "^3.5.12"
+  "types": "./dist/index.d.ts",
+  "author": {
+    "name": "Lizikkai",
+    "email": "1980372249@qq.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.4",
     "@types/node": "^24.7.2",
     "@vitejs/plugin-vue": "^5.1.4",
     "typescript": "~5.6.2",
     "vite": "^5.4.10",
     "vue-tsc": "^2.1.8"
+  },
+  "peerDependencies": {
+    "vue": "^3"
   }
 }
