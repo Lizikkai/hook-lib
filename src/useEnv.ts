@@ -15,7 +15,7 @@ export type PlatformEnvReturn = {
   /** 是企业微信环境 */
   isWxWork: boolean;
   /** 是普通浏览器环境 */
-  isBroswer: boolean;
+  isBrowser: boolean;
   /** 是微信环境 */
   isWeChat: boolean;
   /** user Agent */
@@ -34,7 +34,7 @@ export function usePlatformEnv(): PlatformEnvReturn {
         return (/micromessenger/i.test(unref(userAgent)) && !/wxwork/i.test(unref(userAgent)))
     })
 
-    const isBroswer = computed(() => {
+    const isBrowser = computed(() => {
         return !unref(isWxWork) && !unref(isWeChat)
     })
 
@@ -48,7 +48,7 @@ export function usePlatformEnv(): PlatformEnvReturn {
     return {
         isWxWork: unref(isWxWork),
         isWeChat: unref(isWeChat),
-        isBroswer: unref(isBroswer),
+        isBrowser: unref(isBrowser),
         userAgent: unref(userAgent),
         envType: unref(envType)
     }
