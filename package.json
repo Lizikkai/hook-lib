@@ -1,7 +1,7 @@
 {
   "name": "@lizikai/vue3-hooks",
   "description": "A vue3 hooks library",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "repository": {
     "type": "git",
