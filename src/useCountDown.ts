@@ -18,7 +18,6 @@ export function useCountDown(duration: number, manual: boolean = true) {
 
     function countDown() {
         durationRef.value -= 1
-        console.log('durationRef -->', durationRef.value)
         if (durationRef.value <= 0) {
             canManualTrigger.value = true // 倒计时结束后允许再次触发
         }else {

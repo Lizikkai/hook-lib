@@ -266,20 +266,17 @@ onMounted(() => {
 // 防抖处理函数
 const handleInput = useDebounce((e: Event) => {
   const target = e.target as HTMLInputElement;
-  console.log("防抖执行 - target.value:", target.value);
   value.value = target.value;
 }, 300);
 
 // 节流处理函数
 const throttledFunction = useThrottle(() => {
   throttledCount.value++;
-  console.log("节流执行 - 执行次数:", throttledCount.value);
 }, 500);
 
 // 点击处理函数
 const handleThrottledClick = () => {
   clickCount.value++;
-  console.log("点击次数:", clickCount.value);
   throttledFunction();
 };
 
@@ -287,7 +284,6 @@ const handleThrottledClick = () => {
 const resetCounters = () => {
   clickCount.value = 0;
   throttledCount.value = 0;
-  console.log("计数器已重置");
 };
 </script>
 
